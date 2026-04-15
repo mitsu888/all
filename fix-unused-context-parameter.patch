@@ -1,0 +1,13 @@
+diff --git a/AISecretary/AISecretary/Services/CalendarSyncService.swift b/AISecretary/AISecretary/Services/CalendarSyncService.swift
+index original..fixed 100644
+--- a/AISecretary/AISecretary/Services/CalendarSyncService.swift
++++ b/AISecretary/AISecretary/Services/CalendarSyncService.swift
+@@ -166,7 +166,7 @@ final class CalendarSyncService: ObservableObject {
+     // MARK: - アプリ内スケジュールへエクスポート
+
+     /// 外部カレンダーイベントをアプリ内ScheduleItemに変換
+-    func importEventAsSchedule(event: ExternalCalendarEvent, context: Any) -> ScheduleItem {
++    func importEventAsSchedule(event: ExternalCalendarEvent) -> ScheduleItem {
+         ScheduleItem(
+             title: "📅 \(event.title)",
+             detail: [event.calendarName, event.notes].compactMap { $0 }.joined(separator: "\n"),
