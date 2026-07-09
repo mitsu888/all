@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Virtualenv created by ./subtitle wrapper
+.venv/
+
+# Generated subtitles / intermediate files
+*.ja.srt
+*.ja.mp4
+*.ja.mkv
+*.ja.mov
+*.wav

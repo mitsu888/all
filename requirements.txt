@@ -1,0 +1,19 @@
+# 動画日本語字幕変換エージェント / Video Japanese Subtitle Agent
+# Runtime dependencies. Install with: pip install -r requirements.txt
+#
+# NOTE: ffmpeg is required at runtime but must be installed via your OS
+# package manager (not pip):
+#   macOS:   brew install ffmpeg
+#   Ubuntu:  sudo apt-get install -y ffmpeg
+#   Windows: https://ffmpeg.org/download.html
+
+# Speech recognition (also handles many languages).
+openai-whisper>=20231117
+
+# Preferred (offline) translator. On first use it downloads a small
+# en->ja translation model to ~/.local/share/argos-translate.
+argostranslate>=1.9.0
+
+# Fallback (online) translator used when argostranslate is unavailable
+# or fails. Uses Google Translate's public web endpoint.
+deep-translator>=1.11.4
